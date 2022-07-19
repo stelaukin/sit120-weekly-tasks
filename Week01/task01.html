@@ -6,21 +6,33 @@
 
 <HEAD>
     <meta name="viewport" content="width=device-width, initial-scale=10.0">
+
     <TITLE>LDU</TITLE>
     <link rel="stylesheet" type="text/css" href="task02.css" />
     <script src="https://cdn.jsdelivr.net/npm/vue@2.7.4/dist/vue.js"></script>
 </HEAD>
+
+<ul class="nav">
+    <li><a href="#Bio">Biography</a></li>
+    <li><a href="#KeyInfo">Key Info</a></li>
+    <li><a href="#SignUp">Sign Up</a></li>
+    <li><a href="#Skillset">Skillset</a></li>
+</ul>
+
 
 <BODY style="padding: 30px; font-family:'Arial';">
     <div>
         <h1 style="background-color:rgb(23,113,215); color:white; text-align: center; font-size: 50px;"> &#x1F998 Luke
             Davies-Uniacke &#x1F998
         </h1>
+
         <p>
         <TABLE BORDER=0>
             <TR>
                 <TD>
+                    <a name="#Bio"></a>
                     <h1 style="color:rgb(23,113,215);">Biography</h1>
+
                     <p style="font-size:22px; text-align: justify; padding-right: 30px;">Luke Davies-Uniacke (born 8
                         June
                         1999) is
@@ -71,8 +83,9 @@
                 </TD>
                 <TD>
                     <br>
-                    <h1 style="color:rgb(23,113,215);">Key Information</h1>
-                    <ul style="font-size: 20px;">
+                    <a name="#KeyInfo"></a>
+                    <h1 style="color:rgb(23,113,215)">Key Information</h1>
+                    <ul style="font-size: 20px; list-style-type: vertical;">
                         <li><b>Drafted:</b> Pick 4, 2017 National Draft (Dandenong Stingrays)</li>
                         <li><b>North Melbourne debut:</b> Round 1, 2018</li>
                         <li><b>Career Brownlow votes:</b> 7</li>
@@ -86,6 +99,7 @@
         </p>
         <br>
         <p>
+            <a name="#SingUp"></a>
         <h1 style="color:rgb(23,113,215);"> Newsletter Sign Up</h1>
         <form action="/action_page.php">
             <label for="fname">First name:</label><br>
@@ -98,9 +112,13 @@
         </form>
         </p>
     </div>
+
     <div id="app">
+
+        <a name="Skillset"></a>
+        <h1>Skillset</h1>
         <!-- check the data -->
-        <div v-for="todo in todos" :key="todo.title" :style="{ textDecoration: todo.checked? 'line-through':'none'}">
+        <div v-for="todo in todos" :key="todo.title">
             <input type="checkbox" v-model="todo.checked" />
             {{ todo.title}}
 
