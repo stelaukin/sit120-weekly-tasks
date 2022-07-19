@@ -1,4 +1,4 @@
-let vue = new vue({
+let vue = new Vue({
     el: "#app",
     data: {
         todos: [
