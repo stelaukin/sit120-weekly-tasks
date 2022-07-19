@@ -1,0 +1,52 @@
+body {
+    background-color: rgb(211, 211, 211);
+}
+
+h1 {
+    background-color: rgb(178, 213, 252);
+    color:rgb(23,113,215);
+    padding: 20px;
+}
+
+TABLE {
+    color: #011140
+}
+
+form {
+    font-family: fantasy;
+    font-size: x-large;
+
+
+}
+
+input {
+    width: 33%;
+    height: 30px;
+}
+
+ul.nav {
+    padding-left: 0px;
+    background-color: #3D99CE;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 96%;
+  }
+  ul.nav > li {
+    display: inline-block;
+    padding: 10px 20px;
+  }
+  ul.nav > li:hover {
+    background-color: #2779BF;
+  }
+  ul.nav > li > a {
+    color: white;
+    text-decoration: none;
+  }
+
+ul.KeyInfo {
+  font-family: Segoe UI;
+  font-size: 150%;
+  color: rgb(10, 40, 65);
+}
+  
