@@ -28,6 +28,9 @@ ul.nav {
     padding-left: 0px;
     background-color: #3D99CE;
     text-align: center;
+    position: fixed;
+    top: 0;
+    width: 96%;
   }
   ul.nav > li {
     display: inline-block;
