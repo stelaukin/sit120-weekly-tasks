@@ -5,4 +5,19 @@ https://www.w3schools.com/js/ for more information on JS details. Please see wee
 
 var helloWorld = 'Hello World!';
 
-console.log(helloWorld);
+console.log(helloWorld[4]);
+
+var l = 'l';
+var U = 'U';
+
+U = U.toLowerCase();
+
+console.log(U);
+
+if (U == 'U') {
+    console.log('It is Upper!')
+}
+else {
+    console.log('It is lower!')
+}
+
