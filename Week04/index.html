@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>My first Vue app</title>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.7.4/dist/vue.js"></script>
 </head>
+
 <body>
   <div id="app">
     {{ message }}
@@ -18,11 +20,11 @@
     })
   </script>
 
-<div id="app1">
+  <div id="app1">
     <button @click="count++">Count is: {{ count }} </button>
   </div>
 
-<script>
+  <script>
     var app1 = new Vue({
       el: '#app1',
       data: {
@@ -32,4 +34,5 @@
     app.count = 23;
   </script>
 </body>
+
 </html>

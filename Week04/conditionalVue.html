@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.4/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <h1> v-if and v-else </h1>
+        <p v-if="assignments[0].dueTomorrow"> Due Tomorrow: {{ assignments[0].name}}</p>
+        <p v-else="assignments[0].dueTomorrow"> Not Due Tomorrow: {{ assignments[0].name}}</p>
+        <p v-if="assignments[1].dueTomorrow">{{ assignments[1].name}}</p>
+        <p v-else="assignments[1].dueTomorrow"> Not Due Tomorrow: {{ assignments[1].name}}</p>
+        <p v-if="assignments[2].dueTomorrow">{{ assignments[2].name}}</p>
+        <p v-else="assignments[2].dueTomorrow"> Not Due Tomorrow: {{ assignments[2].name}}</p>
+
+        <h1> v=for: </h1>
+        <p v-for="assignment in dueTomorrowAssignments" :key="assignment.id">
+            {{ assignment.name }}</p>
+        
+        <h1> v-show </h1>
+            <p v-show="active">Condition met</p>
+        
+        
+    </div>
+</body>
+
+</html>
+
+<script>
+    let app = new Vue({
+        el: '#app',
+        data: {
+            active: true,
+
+            assignments: [
+                {
+                    name: 'assignment1',
+                    dueTomorrow: true,
+                    id: 1,
+                },
+                {
+                    name: 'assignment2',
+                    dueTomorrow: false,
+                    id: 2,
+                },
+                {
+                    name: 'assignment3',
+                    dueTomorrow: false,
+                    id: 3,
+                },
+            ],
+        },
+        computed: {
+            dueTomorrowAssignments() {
+                return this.assignments.filter((assignment) => assignment.dueTomorrow);
+            }
+        }
+    });
+    
+    app.count = 2;
+</script>
