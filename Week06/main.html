@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <h3>Username</h3>
+        <input v-model="username" placeholder="Please enter your user name" />
+        <p>Username: {{username}}</p>
+
+        <h3>Password</h3>
+        <input v-model="password" placeholder="Please enter your password" />
+        <p v-if="password.length<=8"> Password: must be 8 characters</p>
+        <p v-else="password.length<=8">Password: {{password}}</p>
+
+        <!--drop down box-->
+        <select v-model="Gender">
+            <option disabled value="">Gender</option>
+            <option>N</option>
+            <option>F</option>
+            <option>M</option>
+        </select>
+        <span>Selected: {{ Gender }}</span>
+        <p></p>
+
+        <!--list-->
+        <select v-model="selected" multiple>
+            <option>A</option>
+            <option>B</option>
+            <option>C</option>
+        </select>
+        <br>
+        <span>Selected: {{ selected }}</span>
+
+        <P></P>
+        <input type="checkbox" id="jack" value="Jack" v-model="checkedNames">
+        <label for="jack">Jack</label>
+        <input type="checkbox" id="john" value="John" v-model="checkedNames">
+        <label for="john">John</label>
+        <input type="checkbox" id="mike" value="Mike" v-model="checkedNames">
+        <label for="mike">Mike</label>
+        <br>
+        <span>Checked names: {{ checkedNames }}</span>
+
+
+        <p>Range</p>
+        <input type="range" />
+        <p>number</p>
+        <input type="number" />
+
+        <!--doesn't work on firefox-->
+        <p>Month</p>
+        <input type="month">
+    </div>
+</body>
+
+</html>
+
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            username: '',
+            password: '',
+            selected: '',
+            Gender: '',
+            checkedNames: []
+
+        },
+    })
+</script>
