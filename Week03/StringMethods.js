@@ -21,7 +21,6 @@ else {
     console.log('It is lower!')
 }
 
-
 let x = 'x';
 let y = 'y';
 
@@ -32,7 +31,6 @@ if (x < y) {
 } else {
     console.log(x + ' and ' + y + ' are equal');
 }
-
 
 let longString =
     'Thanks Basil. I just want to give you a bit of an insight into the Saturday afternoon team. ' +
@@ -45,7 +43,6 @@ let longString =
 
 console.log(longString);
 
-
 // don't do it this way apparently. 
 /* longString = 
     'Thanks Basil. I just want to give you a bit of an insight into the Saturday afternoon team.\
@@ -55,8 +52,6 @@ console.log(longString);
     We’re not always gonna get it right. And sometimes, you’re not going to agree with us. \
     But that’s okay, because just like you we care. Just like you, we’re passionate about the game. \
     So if you want to come along for the ride, join us on Saturday arvos, because we just love the footy.'; */
-
-
 
 // length of a string
 console.log(longString.length);
